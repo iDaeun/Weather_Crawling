@@ -7,3 +7,7 @@ with open(y_file, 'r') as yml:
 
 class TargetConfig:
     WEATHER = cfg['URL']['WEATHER']
+    DB_HOST = cfg['DB']['HOST']
+    DB_USER = cfg['DB']['USER']
+    DB_PW = cfg['DB']['PW']
+    DB_NAME = cfg['DB']['DB']
