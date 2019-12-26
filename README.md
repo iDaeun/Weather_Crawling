@@ -6,4 +6,7 @@ ___
    python3 -m venv venv
    . venv/bin/activate
 
-2. python main.py --tg WEATHER_CRAWLING
+2. 모듈 설치
+    pip install -r requirements.txt
+
+3. python main.py --tg WEATHER_CRAWLING
