@@ -56,7 +56,7 @@ def main(args, logger):
                         print("날씨: ", txt)
                         print("~~~~~")
 
-                        sql = 'INSERT INTO WEATHER (CODE, REGION, TEMPERATURE, W_TXT, W_TIME, C_TIME) VALUES (%s, %s, %s, %s, %s, now()) ON DUPLICATE KEY UPDATE TEMPERATURE = %s, W_TIME = %s, C_TIME = now(), W_TXT = %s'
+                        sql = 'INSERT INTO WEATHER (WTH_CODE, WTH_REGION, WTH_TEMPERATURE, WTH_TXT, WTH_DT, WTH_CREATED_DT) VALUES (%s, %s, %s, %s, %s, now()) ON DUPLICATE KEY UPDATE WTH_TEMPERATURE = %s, WTH_DT = %s, WTH_CREATED_DT = now(), WTH_TXT = %s'
                         data = (code, region, temperature, txt, w_time, temperature, w_time, txt)
                         curs.execute(sql, data)
                         conn.commit()
